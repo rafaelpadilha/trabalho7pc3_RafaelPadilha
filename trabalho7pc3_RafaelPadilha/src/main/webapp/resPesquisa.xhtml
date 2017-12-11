@@ -1,0 +1,33 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<title>Pesquisar - CRUD Aluno</title>
+	</h:head>
+	<h:body>
+		<h2>Resultado de pesquisar por Matrícula</h2>
+			<h:form>
+				<br />
+				<p:dataTable  value="#{alunoController.aluno}" var="aluno">
+					<p:column headerText="Matricula">
+						<h:outputText value="#{aluno.matricula}" />
+					</p:column>
+					
+					<p:column headerText="Nome">
+						<h:outputText value="#{aluno.nome}" />
+					</p:column>
+					
+					<p:column headerText="RA">
+						<h:outputText value="#{aluno.ra}" />
+					</p:column>
+				</p:dataTable>
+				<br />
+				<br />
+				<p:commandButton value="Voltar" action="index.jsp" />
+			</h:form>
+	</h:body>
+</html>

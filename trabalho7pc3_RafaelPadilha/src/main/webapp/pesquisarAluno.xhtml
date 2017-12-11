@@ -1,0 +1,43 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+	<h:head>
+		<title>Pesquisar - CRUD Aluno</title>
+	</h:head>
+	<h:body>
+		<h2>Pesquisar por Matrícula</h2>
+			<h:form>
+				<p:panelGrid columns="2">
+					<p:outputLabel value="Matricula:" />
+					<p:inputText value="#{alunoController.matricula}" />
+				</p:panelGrid>
+				<table>
+					<tr>
+						<td><p:commandButton value="Pesquisar" update="@all" process="@all" actionListener="#{alunoController.findAluno}"
+						/> </td>
+		
+						<td> <p:commandButton value="Voltar" action="index.jsp" /> </td>
+					</tr>
+				</table>
+				<h:outputText value="#{alunoController.nome}" /> 
+				
+				<p:dataTable id="resAluno"  value="#{alunoController.aluno}" var="aluno" >
+					<p:column headerText="Matricula">
+						<h:outputText value="#{aluno.matricula}" />
+					</p:column>
+					
+					<p:column headerText="Nome">
+						<h:outputText value="#{aluno.nome}" />
+					</p:column>
+					
+					<p:column headerText="RA">
+						<h:outputText value="#{aluno.ra}" />
+					</p:column>
+				</p:dataTable>
+			</h:form>
+	</h:body>
+</html>

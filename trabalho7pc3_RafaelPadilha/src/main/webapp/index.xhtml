@@ -1,0 +1,42 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>Pagina Inicial - CRUD Aluno</title>
+</h:head>
+<h:body style="text-align:center;">
+	<h2>Seja bem Vindo!</h2>
+	<h:form>
+		<p:growl id="messages" />
+
+		<p:menubar>
+			<p:menuitem value="Inserir Aluno" url="inserirAluno.jsf"
+				icon="ui-icon-document">
+			</p:menuitem>
+
+			<p:menuitem value="Editar Aluno" url="editarAluno.jsf"
+				icon="ui-icon-pencil">
+			</p:menuitem>
+
+			<p:menuitem value="Excluir Aluno" url="excluirAluno.jsf"
+				icon="ui-icon-close">
+			</p:menuitem>
+
+			<p:menuitem value="Procurar por Matricula" url="pesquisarAluno.jsf"
+				icon="ui-icon-gear">
+			</p:menuitem>
+
+			<p:menuitem value="Listar todos" url="listarAlunos.jsf"
+				icon="ui-icon-help">
+			</p:menuitem>
+
+		</p:menubar>
+	</h:form>
+	<br />
+	<br />
+</h:body>
+</html>
